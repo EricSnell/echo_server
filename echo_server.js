@@ -21,8 +21,10 @@ app.get('/headers/:header_name', function (request, response) {
 
 
 app.get('/version', function(request, response) {
-  response.json({
 
+
+  response.json({
+    version: request.httpVersion
   });
 }); 
 

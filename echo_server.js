@@ -10,20 +10,20 @@ app.get('/headers', function (request, response) {
 });
 
 
-app.get('/headers/:header_name', function (request, reponse) {
+app.get('/headers/:header_name', function (request, response) {
   var header_name = request.params.header_name;
-  var header = request.headers;
-  var test = header[header_name];
+  // var headers = request.headers;
+
   response.json({
-    test
+    userAgent: request.headers[header_name]
   });
 });
-/*
+
 
 app.get('/version', function(request, response) {
   response.json({
 
   });
-}); */
+}); 
 
 app.listen(8080);
